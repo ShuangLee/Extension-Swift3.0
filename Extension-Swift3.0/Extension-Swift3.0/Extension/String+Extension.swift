@@ -63,4 +63,21 @@ extension String {
             }
         }
     }
+    
+    var length : Int { return self.characters.count }
+    
+    func reverse() -> String {
+        return (1...length)
+            .map { "\(self[length - $0])" }
+            .joined(separator: "")
+    }
+    
+    static func randomString(size: Int) -> String {
+        let source = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        return (1...size)
+            .map { (number) -> String in
+                return "\(source[Int(arc4random_uniform(UInt32(source.length)))])"
+            }
+            .joined(separator: "")
+    }
 }
