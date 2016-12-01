@@ -2,6 +2,33 @@
 
 import UIKit
 
+extension String
+{
+    /**
+     *  返回缓存路径的完整路径名
+     */
+    func cacheDir() ->String
+    {
+        let path = NSSearchPathForDirectoriesInDomains( FileManager.SearchPathDirectory.cachesDirectory,  FileManager.SearchPathDomainMask.userDomainMask,  true).last! as NSString
+        return path.appendingPathComponent((self as NSString).lastPathComponent)
+    }
+    /**
+     *  返回文档路径的完整路径名
+     */
+    func documentDir() -> String
+    {
+        let dir = NSSearchPathForDirectoriesInDomains( FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true).last! as NSString
+        return dir.appendingPathComponent((self as NSString).lastPathComponent)
+    }
+    /**
+     *  返回临时路径的完整路径名
+     */
+    func tmpDir() -> String
+    {
+        let dir = NSTemporaryDirectory() as NSString
+        return dir.appendingPathComponent((self as NSString).lastPathComponent)
+    }
+}
 
 extension String {
     
@@ -66,17 +93,5 @@ extension String {
     }
 }
 
-var str = "www.baidu.com"
 
-print(str[4,5])
-print(str[0])
-
-str[0,3] = "BAIDU"
-str[0] = "W"
-
-print(str)
-
-str.length
-str.reverse()
-String.randomString(size: 10)
 

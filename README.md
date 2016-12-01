@@ -7,6 +7,28 @@ some useful Extension for Swift, to develop applications faster
 - UIButton
 
 # Usage
+## String
+```
+var str = "www.baidu.com"
+// 根据索引取值
+print(str[4,5])
+print(str[0])
+
+// 根据索引赋值
+str[0,3] = "BAIDU"
+str[0] = "W"
+
+print(str)
+
+str.length  //长度
+str.reverse()//倒序
+String.randomString(size: 6)//随机字符串
+
+// 拼接路径
+print("hehe".documentDir())
+print("hehe".cacheDir())
+print("hehe".tmpDir())
+```
 ## UIButton
 
 If we want to put the text and picture position swap，setting the titleEdgeInsets and imageEdgeInsets。
