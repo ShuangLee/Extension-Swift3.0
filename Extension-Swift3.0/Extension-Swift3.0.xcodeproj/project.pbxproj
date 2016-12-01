@@ -17,6 +17,9 @@
 		C44F573A1DE6F7AF00106815 /* Extension_Swift3_0UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44F57391DE6F7AF00106815 /* Extension_Swift3_0UITests.swift */; };
 		C44F57491DE6FC4600106815 /* DataType+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44F57481DE6FC4600106815 /* DataType+Extension.swift */; };
 		C4C6B2141DEC1C9B007F0478 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C6B2131DEC1C9B007F0478 /* String+Extension.swift */; };
+		C4EF4A131DF00D1E00CE6E13 /* UIImage+Tint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EF4A121DF00D1E00CE6E13 /* UIImage+Tint.swift */; };
+		C4EF4A151DF00FB000CE6E13 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EF4A141DF00FB000CE6E13 /* UIImage+Extension.swift */; };
+		C4EF4A171DF012DF00CE6E13 /* userIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = C4EF4A161DF012DF00CE6E13 /* userIcon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,8 +55,10 @@
 		C44F57391DE6F7AF00106815 /* Extension_Swift3_0UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension_Swift3_0UITests.swift; sourceTree = "<group>"; };
 		C44F573B1DE6F7AF00106815 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C44F57481DE6FC4600106815 /* DataType+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DataType+Extension.swift"; sourceTree = "<group>"; };
-		C44F574A1DE7037E00106815 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		C4C6B2131DEC1C9B007F0478 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		C4EF4A121DF00D1E00CE6E13 /* UIImage+Tint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Tint.swift"; sourceTree = "<group>"; };
+		C4EF4A141DF00FB000CE6E13 /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		C4EF4A161DF012DF00CE6E13 /* userIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = userIcon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,8 +112,8 @@
 				C44F57471DE6F7CB00106815 /* Extension */,
 				C44F57191DE6F7AF00106815 /* AppDelegate.swift */,
 				C44F571B1DE6F7AF00106815 /* ViewController.swift */,
-				C44F574A1DE7037E00106815 /* MyPlayground.playground */,
 				C44F571D1DE6F7AF00106815 /* Main.storyboard */,
+				C4EF4A161DF012DF00CE6E13 /* userIcon.png */,
 				C44F57201DE6F7AF00106815 /* Assets.xcassets */,
 				C44F57221DE6F7AF00106815 /* LaunchScreen.storyboard */,
 				C44F57251DE6F7AF00106815 /* Info.plist */,
@@ -140,6 +145,8 @@
 				C44F57481DE6FC4600106815 /* DataType+Extension.swift */,
 				C4C6B2131DEC1C9B007F0478 /* String+Extension.swift */,
 				C42799D01DEC3224008CB4BC /* UIButon+Extension.swift */,
+				C4EF4A121DF00D1E00CE6E13 /* UIImage+Tint.swift */,
+				C4EF4A141DF00FB000CE6E13 /* UIImage+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -254,6 +261,7 @@
 				C44F57241DE6F7AF00106815 /* LaunchScreen.storyboard in Resources */,
 				C44F57211DE6F7AF00106815 /* Assets.xcassets in Resources */,
 				C44F571F1DE6F7AF00106815 /* Main.storyboard in Resources */,
+				C4EF4A171DF012DF00CE6E13 /* userIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,9 +287,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4C6B2141DEC1C9B007F0478 /* String+Extension.swift in Sources */,
+				C4EF4A151DF00FB000CE6E13 /* UIImage+Extension.swift in Sources */,
 				C44F571C1DE6F7AF00106815 /* ViewController.swift in Sources */,
 				C44F571A1DE6F7AF00106815 /* AppDelegate.swift in Sources */,
 				C42799D11DEC3224008CB4BC /* UIButon+Extension.swift in Sources */,
+				C4EF4A131DF00D1E00CE6E13 /* UIImage+Tint.swift in Sources */,
 				C44F57491DE6FC4600106815 /* DataType+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

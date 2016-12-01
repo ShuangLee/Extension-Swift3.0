@@ -13,7 +13,26 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        testAddImageWaterMark()
+       
+    }
+    
+    private func testAddTextWaterMark() {
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 20, width: view.frame.size.width, height: 500))
+        imageView.image =  #imageLiteral(resourceName: "userIcon.png").waterMarkedImage(waterMarkText: "浮生若梦", position: .TopLeft, margin: CGPoint(x:10, y:10), waterMarkTextColor: UIColor.green, waterMarkTextFont: UIFont.systemFont(ofSize: 16), backgroundColor: UIColor.gray).waterMarkedImage(waterMarkText: "www.jianshu.com", position: .BottomLeft, margin: CGPoint(x:10,y:10), waterMarkTextColor: UIColor.red, waterMarkTextFont: UIFont.systemFont(ofSize: 16), backgroundColor: UIColor.gray)
+        view.addSubview(imageView)
+    }
+    
+    private func testAddImageWaterMark() {
+        let imageView = UIImageView(image: #imageLiteral(resourceName: "userIcon.png").waterMarkedImage(waterMarkImage: #imageLiteral(resourceName: "alert"), position: .TopLeft, margin: CGPoint(x:10,y:20), alpha: 1.0))
+        view.addSubview(imageView)
+    }
+    
+    private func testString() {
         
+    }
+
+    func testBtn() {
         let btn1:UIButton = UIButton(frame: CGRect(x: 0, y: 0, width: 200, height: 32))
         btn1.center = CGPoint(x:view.frame.size.width/2, y:60)
         btn1.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20) //文字大小
@@ -47,12 +66,6 @@ class ViewController: UIViewController {
                  spacing: 10.0, state: .normal)
         view.addSubview(btn4)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 
 }
 
