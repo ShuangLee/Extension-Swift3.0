@@ -88,4 +88,37 @@ extension UIImage {
         
         return waterMarkedImage!
     }
+    
+    // 添加棕褐色滤镜CISepiaTone
+    // Core Image是一个强大的滤镜处理框架。它除了可以直接给图片添加各种内置滤镜，还能精确地修改鲜艳程度, 色泽, 曝光等
+    //棕褐色复古滤镜（老照片效果）
+    func sepiaTone() -> UIImage?
+    {
+        let imageData = UIImagePNGRepresentation(self)
+        let inputImage = CoreImage.CIImage(data: imageData!)
+        let context = CIContext(options:nil)
+        let filter = CIFilter(name:"CISepiaTone")
+        filter!.setValue(inputImage, forKey: kCIInputImageKey)
+        filter!.setValue(0.8, forKey: "inputIntensity")
+        if let outputImage = filter!.outputImage {
+            let outImage = context.createCGImage(outputImage, from: outputImage.extent)
+            return UIImage(cgImage: outImage!)
+        }
+        return nil
+    }
+    
+    //黑白效果滤镜
+    func noir() -> UIImage?
+    {
+        let imageData = UIImagePNGRepresentation(self)
+        let inputImage = CoreImage.CIImage(data: imageData!)
+        let context = CIContext(options:nil)
+        let filter = CIFilter(name:"CIPhotoEffectNoir")
+        filter!.setValue(inputImage, forKey: kCIInputImageKey)
+        if let outputImage = filter!.outputImage {
+            let outImage = context.createCGImage(outputImage, from: outputImage.extent)
+            return UIImage(cgImage: outImage!)
+        }
+        return nil
+    }
 }

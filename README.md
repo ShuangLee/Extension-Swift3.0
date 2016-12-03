@@ -5,6 +5,8 @@ some useful Extension for Swift, to develop applications faster
 - Double
 - String
 - UIButton
+- UIImage
+- UIDevice
 
 # Usage
 ## String

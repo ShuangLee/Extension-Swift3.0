@@ -14,7 +14,7 @@ class ViewController: UIViewController {
         
         super.viewDidLoad()
         testAddImageWaterMark()
-       
+       print("welcome to hangge.com".md5)
     }
     
     private func testAddTextWaterMark() {
